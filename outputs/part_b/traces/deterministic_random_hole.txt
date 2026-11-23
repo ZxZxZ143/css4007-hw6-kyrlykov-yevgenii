@@ -1,0 +1,30 @@
+condition=deterministic_random, batch_seed=11
+policy=random, episode_seed=11000
+
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=1, state=0, action=up, next_state=0, reward=0, terminated=False, truncated=False
+  (Up)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=2, state=0, action=right, next_state=1, reward=0, terminated=False, truncated=False
+  (Right)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=3, state=1, action=down, next_state=5, reward=0, terminated=True, truncated=False
+  (Down)
+SFFF
+FHFH
+FFFH
+HFFG
+
+outcome=hole, steps=3, total_reward=0.0

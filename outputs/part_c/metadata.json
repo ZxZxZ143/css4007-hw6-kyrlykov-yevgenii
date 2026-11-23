@@ -1,0 +1,113 @@
+{
+  "python": "3.13.12",
+  "numpy": "2.5.5",
+  "config_source": "data/maps.json",
+  "config": {
+    "coordinate_origin": 1,
+    "actions": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "discount": 0.9,
+    "initial_value": 0,
+    "terminal_value": 0,
+    "reward_rule": "Reward of the destination tile, including when blocked and staying in place; no further reward after termination.",
+    "blocked_move": "stay",
+    "slip_rule": "Movement probabilities depend on the tile the action starts from; resolve each outcome against walls and boundaries.",
+    "tiles": {
+      "S": {
+        "meaning": "start",
+        "reward": -1,
+        "movement": "deterministic"
+      },
+      ".": {
+        "meaning": "ordinary floor",
+        "reward": -1,
+        "movement": "deterministic"
+      },
+      "M": {
+        "meaning": "mud",
+        "reward": -3,
+        "movement": "deterministic"
+      },
+      "I": {
+        "meaning": "ice",
+        "reward": -1,
+        "movement": "slippery",
+        "intended": 0.8,
+        "perpendicular_each": 0.1
+      },
+      "D": {
+        "meaning": "sand",
+        "reward": -2,
+        "movement": "deterministic"
+      },
+      "W": {
+        "meaning": "shallow water",
+        "reward": -5,
+        "movement": "deterministic"
+      },
+      "G": {
+        "meaning": "goal",
+        "reward": 10,
+        "terminal": true
+      },
+      "H": {
+        "meaning": "hole",
+        "reward": -10,
+        "terminal": true
+      },
+      "#": {
+        "meaning": "wall",
+        "traversable": false
+      }
+    },
+    "paper_map": [
+      ".M.G",
+      ".#IH",
+      "S..."
+    ],
+    "extended_map": [
+      ".M.G",
+      ".#IH",
+      "SD.W"
+    ],
+    "paper_v2_positions": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "simulation": {
+      "batch_seeds": [
+        11,
+        22,
+        33
+      ],
+      "episodes_per_batch": 50,
+      "max_steps": 100,
+      "episode_seed_rule": "1000 * batch_seed + i, i = 0..49"
+    },
+    "solver": {
+      "tolerance": 1e-06,
+      "max_iterations": 10000
+    }
+  },
+  "simulation_rng": "random.Random(episode_seed); one draw per step",
+  "solver": "synchronous value iteration implemented in part_c.py",
+  "objective": "expected discounted reward; goal probability evaluated separately",
+  "rule_checks": {
+    "paper_map": 16,
+    "extended_map": 14
+  }
+}

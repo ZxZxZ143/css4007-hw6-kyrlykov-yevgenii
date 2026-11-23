@@ -1,0 +1,82 @@
+[
+  {
+    "check": "wall is not a state",
+    "passed": true,
+    "detail": "(2,2) excluded"
+  },
+  {
+    "check": "boundary",
+    "passed": true,
+    "detail": "(1,1) up -> (1,1), reward -1"
+  },
+  {
+    "check": "wall from mud",
+    "passed": true,
+    "detail": "(1,2) down -> (1,2), reward -3"
+  },
+  {
+    "check": "ice outcomes",
+    "passed": true,
+    "detail": "up: 0.8 floor; 0.1 blocked by wall and remain on ice; 0.1 hole"
+  },
+  {
+    "check": "probabilities sum to one",
+    "passed": true,
+    "detail": "checked every state/action"
+  },
+  {
+    "check": "ice entry deterministic",
+    "passed": true,
+    "detail": "starting on ordinary floor: one outcome even when destination is ice"
+  },
+  {
+    "check": "mud entry reward",
+    "passed": true,
+    "detail": "enter M: -3"
+  },
+  {
+    "check": "goal entry reward",
+    "passed": true,
+    "detail": "enter G: +10 without extra floor cost"
+  },
+  {
+    "check": "hole entry reward",
+    "passed": true,
+    "detail": "enter H: -10"
+  },
+  {
+    "check": "no post-terminal rewards",
+    "passed": true,
+    "detail": "all actions from G/H self-loop with zero reward"
+  },
+  {
+    "check": "terminal values zero",
+    "passed": true,
+    "detail": "V(G)=V(H)=0"
+  },
+  {
+    "check": "V1 matches paper",
+    "passed": true,
+    "detail": "all nine nonterminal cells"
+  },
+  {
+    "check": "V2 (1,2)",
+    "passed": true,
+    "detail": "actual=8.0, paper=8"
+  },
+  {
+    "check": "V2 (1,3)",
+    "passed": true,
+    "detail": "actual=10.0, paper=10"
+  },
+  {
+    "check": "V2 (2,3)",
+    "passed": true,
+    "detail": "actual=5.21, paper=5.21"
+  },
+  {
+    "check": "independent fixed-policy value",
+    "passed": true,
+    "detail": "max difference from direct linear-system solution=2.14149866729e-08"
+  }
+]

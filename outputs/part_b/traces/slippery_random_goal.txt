@@ -1,0 +1,65 @@
+condition=slippery_random, batch_seed=22
+policy=random, episode_seed=22015
+
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=1, state=0, action=up, next_state=1, reward=0, terminated=False, truncated=False
+  (Up)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=2, state=1, action=up, next_state=2, reward=0, terminated=False, truncated=False
+  (Up)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=3, state=2, action=down, next_state=6, reward=0, terminated=False, truncated=False
+  (Down)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=4, state=6, action=left, next_state=10, reward=0, terminated=False, truncated=False
+  (Left)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=5, state=10, action=down, next_state=14, reward=0, terminated=False, truncated=False
+  (Down)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=6, state=14, action=left, next_state=13, reward=0, terminated=False, truncated=False
+  (Left)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=7, state=13, action=right, next_state=14, reward=0, terminated=False, truncated=False
+  (Right)
+SFFF
+FHFH
+FFFH
+HFFG
+
+step=8, state=14, action=right, next_state=15, reward=1, terminated=True, truncated=False
+  (Right)
+SFFF
+FHFH
+FFFH
+HFFG
+
+outcome=goal, steps=8, total_reward=1.0

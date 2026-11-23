@@ -1,0 +1,86 @@
+[
+  {
+    "condition": "deterministic_random",
+    "slippery": false,
+    "batch_seed": 11,
+    "episode_seed": 11000,
+    "policy": "random",
+    "steps": 3,
+    "total_reward": 0.0,
+    "outcome": "hole",
+    "final_state": 5,
+    "file": "traces/deterministic_random_hole.txt"
+  },
+  {
+    "condition": "deterministic_random",
+    "slippery": false,
+    "batch_seed": 33,
+    "episode_seed": 33006,
+    "policy": "random",
+    "steps": 7,
+    "total_reward": 1.0,
+    "outcome": "goal",
+    "final_state": 15,
+    "file": "traces/deterministic_random_goal.txt"
+  },
+  {
+    "condition": "deterministic_fixed",
+    "slippery": false,
+    "batch_seed": 11,
+    "episode_seed": 11000,
+    "policy": "fixed",
+    "steps": 6,
+    "total_reward": 1.0,
+    "outcome": "goal",
+    "final_state": 15,
+    "file": "traces/deterministic_fixed_goal.txt"
+  },
+  {
+    "condition": "slippery_random",
+    "slippery": true,
+    "batch_seed": 11,
+    "episode_seed": 11000,
+    "policy": "random",
+    "steps": 4,
+    "total_reward": 0.0,
+    "outcome": "hole",
+    "final_state": 5,
+    "file": "traces/slippery_random_hole.txt"
+  },
+  {
+    "condition": "slippery_random",
+    "slippery": true,
+    "batch_seed": 22,
+    "episode_seed": 22015,
+    "policy": "random",
+    "steps": 8,
+    "total_reward": 1.0,
+    "outcome": "goal",
+    "final_state": 15,
+    "file": "traces/slippery_random_goal.txt"
+  },
+  {
+    "condition": "slippery_fixed",
+    "slippery": true,
+    "batch_seed": 11,
+    "episode_seed": 11000,
+    "policy": "fixed",
+    "steps": 8,
+    "total_reward": 0.0,
+    "outcome": "hole",
+    "final_state": 5,
+    "file": "traces/slippery_fixed_hole.txt"
+  },
+  {
+    "condition": "slippery_fixed",
+    "slippery": true,
+    "batch_seed": 11,
+    "episode_seed": 11020,
+    "policy": "fixed",
+    "steps": 14,
+    "total_reward": 1.0,
+    "outcome": "goal",
+    "final_state": 15,
+    "file": "traces/slippery_fixed_goal.txt"
+  }
+]
